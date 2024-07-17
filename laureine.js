@@ -3,10 +3,10 @@ const fs = require('fs');
 
 module.exports = {
 		config: {
-				name: "ai88",
+				name: "laureine",
 				version: "1.0.0",
 				role: 0,
-				author: "Jonell Magallanes",
+				author: "Aziz",
 				shortDescription: "EDUCATIONAL",
 				countDown: 0,
 				category: "other",
@@ -19,16 +19,16 @@ module.exports = {
 				const content = encodeURIComponent(args.join(" "));
 				const apiUrl = `https://aiapiviafastapiwithimagebyjonellmagallanes.replit.app/ai?content=${content}`;
 
-				if (!content) return api.sendMessage("Please provide your question.\n\nExample: ai what is the solar system?", event.threadID, event.messageID);
+				if (!content) return api.sendMessage("Hello, Je suis Laureine Ai votre humble serviteuse virtuelle, je suis là pour repondre à toutes vos questions\n\nPar exemple: laureine qu'est ce que le système solaire ?", event.threadID, event.messageID);
 
 				try {
-						api.sendMessage("🔍 | AI is searching for your answer. Please wait...", event.threadID, event.messageID);
+						api.sendMessage("🔍 | Recherche de réponse, veuillez patienter...", event.threadID, event.messageID);
 
 						const response = await axios.get(apiUrl);
 						const { request_count, airesponse, image_url } = response.data;
 
 						if (airesponse) {
-								api.sendMessage(`${airesponse}\n\n📝 Request Count: ${request_count}`, event.threadID, event.messageID);
+								api.sendMessage(`${airesponse}\n\n Request Count: ${request_count}`, event.threadID, event.messageID);
 
 								if (image_url) {
 										const imagePath = './image.jpg';
