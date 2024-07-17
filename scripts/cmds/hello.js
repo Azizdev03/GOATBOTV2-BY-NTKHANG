@@ -1,6 +1,6 @@
-module.exports = {
+unmodule.exports = {
  config: {
- name: "hello", 
+ name: "salut", 
  version: "1.0", 
  author: "Ayoub ßťøçïo", 
  countDown: 5, 
@@ -22,18 +22,18 @@ module.exports = {
 
  langs: {
  vi: {
- hello: "xin chào",
- helloWithName: "xin chào, id facebook của bạn là %1"
+ salut: "xin chào",
+ salutWithName: "xin chào, id facebook của bạn là %1"
  }, // Vietnamese language
  en: {
- hello: "hello world",
- helloWithName: "hello, your facebook id is %1"
+ salut: "hello world",
+ salutWithName: "hello, your facebook id is %1"
  } // English language
  },
 
 
  onStart: async function ({ api, args, message, event, threadsData, usersData, dashBoardData, globalData, threadModel, userModel, dashBoardModel, globalModel, role, commandName, getLang }) {
- message.reply("hello my friend ✨🙂💔")
+ message.reply("Hey, moi c’est Laureine. À ton service ☺️")
 
  }
 };
